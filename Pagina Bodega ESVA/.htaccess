@@ -1,0 +1,23 @@
+# Habilitar RewriteEngine
+RewriteEngine On
+
+# Base del proyecto (si está en una subcarpeta)
+RewriteBase /Pagina Bodega ESVA/
+
+# 1️⃣ Quitar .php de las URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
+# 2️⃣ Redirigir index.php -> /
+DirectoryIndex index.php
+
+# 3️⃣ Si alguien entra a /admin, que vaya a admin_login.php si no está logueado
+RewriteRule ^admin/?$ admin/admin_login.php [L]
+
+# 4️⃣ Ejemplo: URL amigables
+# /producto/5 -> producto.php?id=5
+RewriteRule ^producto/([0-9]+)/?$ producto.php?id=$1 [L]
+
+# 5️⃣ Página 404 personalizada
+ErrorDocument 404 /404.php

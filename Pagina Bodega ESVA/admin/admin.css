@@ -1,0 +1,127 @@
+/* ==========================
+   🎨 ESTILOS DEL PANEL ADMIN
+   ========================== */
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 240px;
+    background: linear-gradient(180deg, #1e1e2f 0%, #292945 100%);
+    color: #fff;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar h2 {
+    text-align: center;
+    font-size: 1.4em;
+    margin-bottom: 30px;
+    color: #00b4d8;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #d1d1e9;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    padding: 10px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background: #00b4d8;
+    color: #fff;
+    transform: translateX(4px);
+}
+
+.sidebar ul li a i {
+    font-size: 18px;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+main {
+    margin-left: 260px;
+    padding: 40px;
+}
+
+main h1 {
+    color: #1e1e2f;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+main p {
+    color: #555;
+    font-size: 1.1em;
+}
+
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+/* Tarjetas de estadísticas */
+.tarjeta {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    padding: 25px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.tarjeta h3 {
+    margin: 0;
+    color: #1e1e2f;
+    font-size: 1.2em;
+}
+
+.tarjeta p {
+    font-size: 1.8em;
+    color: #007bff;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* ===== FOOTER ===== */
+.admin-footer {
+    margin-left: 260px;
+    padding: 20px;
+    background: #1e1e2f;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    border-top: 2px solid #00b4d8;
+}
